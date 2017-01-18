@@ -64,7 +64,7 @@
 
 					if (counter == 0){
 
-						$('.nav-menu').slideDown("slow");
+						$('.nav-menu').slideDown(450);
 						counter++;
 
 					}else{
@@ -83,16 +83,19 @@
 				});
 
 			$('.nav-menu a').click(function(e){
+
 				e.preventDefault();
+
 				$('.nav-menu').slideUp("fast", function(){
 					$('#displayMenu').attr('style','');	
-
 				});	
+
 				counter = 0;
 			});
 
 			$( window ).resize(function() {
 			   if($( window ).width() > 768){
+
 			   		$('#displayMenu').attr('style','');	
 			   		counter = 0;
 			   }

@@ -58,7 +58,8 @@ html {
   margin: 0; }
   @media only screen and (max-width: 767px) {
     .nav-menu ul {
-      min-width: 100%; } }
+      min-width: 100%;
+      background-color: #7c95a6; } }
   @media only screen and (min-width: 768px) {
     .nav-menu ul {
       padding-left: 1%; } }
@@ -73,13 +74,20 @@ html {
   text-align: center; }
   @media only screen and (max-width: 767px) {
     .nav-menu li {
-      line-height: 40px;
-      min-width: 100%; } }
+      line-height: 60px;
+      border-bottom: 1px solid #e5eaed;
+      min-width: 100%; }
+      .nav-menu li:hover {
+        background-color: #a6cce6; } }
   @media only screen and (min-width: 768px) {
     .nav-menu li {
       min-width: 100px; } }
 .nav-menu a {
   text-decoration: none; }
+  @media only screen and (max-width: 767px) {
+    .nav-menu a {
+      color: #fff;
+      padding: 20px 30%; } }
 
 @media only screen and (max-width: 767px) {
   .logo {
@@ -89,8 +97,8 @@ html {
   display: inline-block;
   position: absolute;
   right: 0;
-  padding: 7px 15px 0 0;
-  font-size: 27px; }
+  padding: 4px 15px 0 0;
+  font-size: 35px; }
   @media only screen and (min-width: 768px) {
     .nav-button {
       display: none; } }

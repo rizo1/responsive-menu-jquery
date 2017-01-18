@@ -80,6 +80,7 @@ html{
 		margin:0;
 		@include mobile-screens-only{
 		min-width:100%; 
+		background-color: #7c95a6;
 		}
 
 		@include small-screens{
@@ -99,8 +100,14 @@ html{
 		display:inline-block;
 		text-align:center;
 		@include mobile-screens-only{
-			line-height:40px;
+			line-height:60px;
+			
+			border-bottom:1px solid #e5eaed;
 			min-width:100%;
+
+			&:hover{
+				background-color: #a6cce6;
+			}
 		}
 		@include small-screens{
 			min-width:100px;
@@ -110,6 +117,11 @@ html{
 
 	a{
 		text-decoration:none;
+
+		@include mobile-screens-only{
+			color:#fff;
+			padding:20px 30%;
+		}
 	}
 }
 
@@ -125,8 +137,8 @@ html{
 	display:inline-block;
 	position:absolute;
 	right:0;
-	padding: 7px 15px 0 0;
-	font-size: 27px;
+	padding: 4px 15px 0 0;
+	font-size: 35px;
 
 	@include small-screens{
 		display:none;
