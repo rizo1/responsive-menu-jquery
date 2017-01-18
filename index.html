@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive Menu 1</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<nav>
+		<div class="logo">
+			<a href="#">
+				<img src="logo_placeholder.png" alt="company logo">
+			</a>
+		</div>
+		<div class="nav-button">
+			<a href="#" id="menuButton"  onclick="rotateFoo()">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</a>
+		</div>
+		
+		<div class="nav-menu" id="displayMenu">
+			
+			<ul>
+				<li>
+					<a href="">Home</a>
+				</li>
+				<li>
+					<a href="">About</a>
+					<!-- <ul class="hidden">
+						<li><a href="#">Who We Are</a></li>
+						<li><a href="#">What We Do</a></li>
+					</ul> -->
+				</li>
+				<li>
+					<a href="">Portfolio</a>
+				<!-- 	<ul class="hidden">
+					<li><a href="#">Who We Are</a></li>
+					<li><a href="#">What We Do</a></li>
+				</ul> -->
+				</li>
+				<li>
+					<a href="">News</a>
+				</li>
+				<li>
+					<a href="">Contact</a>
+				</li>
+			</ul>
+				
+		</div>		
+	</nav>
+
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var counter = 0;
+
+			$('#menuButton').click(function(e){
+
+					e.preventDefault();
+
+					if (counter == 0){
+
+						$('.nav-menu').slideDown("slow");
+						counter++;
+
+					}else{
+
+						$('.nav-menu').slideUp("fast");		
+						counter = 0;
+
+					}
+					
+						
+				});
+
+			$('.nav-menu a').click(function(e){
+				e.preventDefault();
+				$('.nav-menu').slideUp("fast");	
+				counter = 0;
+			});
+
+		});
+	</script>
+
+</body>
+</html>

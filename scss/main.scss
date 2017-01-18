@@ -1,0 +1,140 @@
+@import "partials/mixins";
+
+html{
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+}
+
+.container{
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+
+	
+
+	@include small-screens{
+		width:768px;
+	}
+	@include medium-screens{
+		width:970px;
+	}
+	@include large-screens{
+		width:1170px;
+	}
+	
+	
+}
+.logo{
+	padding:5px;
+	max-width:30%;
+	
+
+	@include small-screens{
+		max-width:15%;
+		padding:20px;
+	}
+	@include medium-screens{
+		padding:20px;
+		max-width:20%;
+	}
+	@include large-screens{
+		max-width:30%;
+	}
+
+	img{
+
+		width: 100px;
+
+		@include small-screens{
+		width:100%;
+		height:auto;
+	}
+		
+		
+	}
+}
+
+
+.logo, .nav-menu{
+	display:inline-block;
+	vertical-align:middle;
+}
+.nav-menu{
+	@include mobile-screens-only{
+		 width:100%;
+		display:none;
+		}
+
+	@include medium-screens{
+		max-width:75%;
+	}
+	@include large-screens{
+		max-width:80%;
+	}
+
+	ul{
+		
+		padding:0;
+		margin:0;
+		@include mobile-screens-only{
+		min-width:100%; 
+		}
+
+		@include small-screens{
+			padding-left:1%;
+		}
+		@include medium-screens{
+			padding-left:5%;
+		}
+		@include large-screens{
+			padding-left:20%;
+		}
+
+	}
+
+	li{
+		
+		display:inline-block;
+		text-align:center;
+		@include mobile-screens-only{
+			line-height:40px;
+			min-width:100%;
+		}
+		@include small-screens{
+			min-width:100px;
+		}
+
+	}
+
+	a{
+		text-decoration:none;
+	}
+}
+
+
+
+.logo{
+	@include mobile-screens-only{
+		position:relative;
+	}
+}
+
+.nav-button{
+	display:inline-block;
+	position:absolute;
+	right:0;
+	padding: 7px 15px 0 0;
+	font-size: 27px;
+
+	@include small-screens{
+		display:none;
+	}
+}
+
+
+
+
+	
+}

@@ -1,0 +1,105 @@
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media only screen and (min-width: 768px) {
+    .container {
+      width: 768px; } }
+  @media only screen and (min-width: 922px) {
+    .container {
+      width: 970px; } }
+  @media only screen and (min-width: 1200px) {
+    .container {
+      width: 1170px; } }
+
+.logo {
+  padding: 5px;
+  max-width: 30%; }
+  @media only screen and (min-width: 768px) {
+    .logo {
+      max-width: 15%;
+      padding: 20px; } }
+  @media only screen and (min-width: 922px) {
+    .logo {
+      padding: 20px;
+      max-width: 20%; } }
+  @media only screen and (min-width: 1200px) {
+    .logo {
+      max-width: 30%; } }
+  .logo img {
+    width: 100px; }
+    @media only screen and (min-width: 768px) {
+      .logo img {
+        width: 100%;
+        height: auto; } }
+
+.logo, .nav-menu {
+  display: inline-block;
+  vertical-align: middle; }
+
+@media only screen and (max-width: 767px) {
+  .nav-menu {
+    width: 100%;
+    display: none; } }
+@media only screen and (min-width: 922px) {
+  .nav-menu {
+    max-width: 75%; } }
+@media only screen and (min-width: 1200px) {
+  .nav-menu {
+    max-width: 80%; } }
+.nav-menu ul {
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+  @media only screen and (min-width: 768px) {
+    .nav-menu ul {
+      padding-left: 1%; } }
+  @media only screen and (min-width: 922px) {
+    .nav-menu ul {
+      padding-left: 5%; } }
+  @media only screen and (min-width: 1200px) {
+    .nav-menu ul {
+      padding-left: 20%; } }
+.nav-menu li {
+  display: inline-block;
+  text-align: center; }
+  @media only screen and (max-width: 767px) {
+    .nav-menu li {
+      line-height: 40px;
+      width: 100%; } }
+  @media only screen and (min-width: 768px) {
+    .nav-menu li {
+      min-width: 100px; } }
+.nav-menu a {
+  text-decoration: none; }
+
+@media only screen and (max-width: 767px) {
+  .logo {
+    position: relative; } }
+
+.nav-button {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  padding: 7px 15px 0 0;
+  font-size: 27px; }
+  @media only screen and (min-width: 768px) {
+    .nav-button {
+      display: none; } }
+
+#menuButton i {
+  transition: rotate  0.5s; }
+
+.show-menu {
+  display: block; }
+
+.rotate-button i {
+  transform: rotate(90deg); }
+
+/*# sourceMappingURL=main.css.map */
