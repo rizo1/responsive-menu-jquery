@@ -54,9 +54,11 @@ html {
   .nav-menu {
     max-width: 80%; } }
 .nav-menu ul {
-  width: 100%;
   padding: 0;
   margin: 0; }
+  @media only screen and (max-width: 767px) {
+    .nav-menu ul {
+      min-width: 100%; } }
   @media only screen and (min-width: 768px) {
     .nav-menu ul {
       padding-left: 1%; } }
@@ -72,7 +74,7 @@ html {
   @media only screen and (max-width: 767px) {
     .nav-menu li {
       line-height: 40px;
-      width: 100%; } }
+      min-width: 100%; } }
   @media only screen and (min-width: 768px) {
     .nav-menu li {
       min-width: 100px; } }
@@ -92,14 +94,5 @@ html {
   @media only screen and (min-width: 768px) {
     .nav-button {
       display: none; } }
-
-#menuButton i {
-  transition: rotate  0.5s; }
-
-.show-menu {
-  display: block; }
-
-.rotate-button i {
-  transform: rotate(90deg); }
 
 /*# sourceMappingURL=main.css.map */
