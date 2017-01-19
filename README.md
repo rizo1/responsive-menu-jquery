@@ -1,6 +1,6 @@
-## Synopsis
+## Synopsis 
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+A simple fully responsive single tier navigator menu. HTML, jQuery, and CSS compiled from SCSS.
 
 ## Code Example
 
@@ -8,7 +8,7 @@ Show what the library does as concisely as possible, developers should be able t
 
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+I created this git to provide a navigator template for website projects that was stable and fully responsive - with the aim of adding drop-down functionality in the future. 
 
 ## Installation
 
