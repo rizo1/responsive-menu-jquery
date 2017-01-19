@@ -24,27 +24,27 @@
 			
 			<ul>
 				<li>
-					<a href="">Home</a>
+					<a href="#home">Home</a>
 				</li>
 				<li>
-					<a href="">About</a>
+					<a href="#">About</a>
 					<!-- <ul class="hidden">
 						<li><a href="#">Who We Are</a></li>
 						<li><a href="#">What We Do</a></li>
 					</ul> -->
 				</li>
 				<li>
-					<a href="">Portfolio</a>
+					<a href="#">Portfolio</a>
 				<!-- 	<ul class="hidden">
 					<li><a href="#">Who We Are</a></li>
 					<li><a href="#">What We Do</a></li>
 				</ul> -->
 				</li>
 				<li>
-					<a href="">News</a>
+					<a href="#">News</a>
 				</li>
 				<li>
-					<a href="">Contact</a>
+					<a href="#">Contact</a>
 				</li>
 			</ul>
 				
@@ -56,62 +56,23 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 
-			var counter = 0;
-
-			
-
-			$('#menuButton').click(function(e){
-
+				$('#menuButton').click(function(e){
 					e.preventDefault();
-
-					if (counter == 0){
-
-						$('.nav-menu').slideDown(450);
-						$('.menu-bars').addClass('fa-rotate-90');
-					
-
-
-						counter++;
-
-					}else{
-
-						$('.nav-menu').slideUp("fast", function(){
-							$('#displayMenu').attr('style','');	
-
-						});
-
-						$('.menu-bars').removeClass('fa-rotate-90');
-
-					
-						
-						counter = 0;
-
-					}
-					
-						
+					$('.nav-menu').slideToggle(400);
+					$('.menu-bars').toggleClass('fa-rotate-90');
 				});
-
-			$('.nav-menu a').click(function(e){
-
-				e.preventDefault();
-
-				$('.nav-menu').slideUp("fast", function(){
-					$('#displayMenu').attr('style','');	
-					$('.menu-bars').removeClass('fa-rotate-90');
-				});	
-
-				counter = 0;
-			});
-
-			$( window ).resize(function() {
-			   if($( window ).width() > 768){
-
-			   		$('#displayMenu').attr('style','');	
-			   		$('.menu-bars').removeClass('fa-rotate-90');
-			   		counter = 0;
-			   }
-			});
-
+				$('.nav-menu a').click(function(){
+					if($( window ).width() < 768){
+						$('.nav-menu').slideToggle(400);
+						$('.menu-bars').toggleClass('fa-rotate-90');
+					}					
+				});
+				$( window ).resize(function() {
+				   if($( window ).width() > 768){
+				   		$('#displayMenu').attr('style','');	
+				   		$('.menu-bars').removeClass('fa-rotate-90');
+				   }
+				});
 		});
 	</script>
 
