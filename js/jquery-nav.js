@@ -17,4 +17,13 @@ $(document).ready(function(){
 				   		$('.menu-bars').removeClass('fa-rotate-90');
 				   }
 				});
+
+
+				$( window ).scroll(function(){
+					if($( window ).scrollTop() > 150){
+						$('nav').addClass('fixed-nav');
+					} else {
+						 $('nav').removeClass('fixed-nav');
+					}
+				});
 		});
