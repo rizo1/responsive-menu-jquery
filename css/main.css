@@ -83,14 +83,15 @@ section {
       line-height: 60px;
       border-bottom: 1px solid #e5eaed;
       min-width: 100%;
-      background-color: #7c95a6; }
+      background-color: #087f8c; }
       .nav-menu li:hover {
-        background-color: #a6cce6; } }
+        background-color: #0995a4; } }
   @media only screen and (min-width: 768px) {
     .nav-menu li {
       width: 20%; } }
 .nav-menu a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #5f7a8c; }
   @media only screen and (max-width: 767px) {
     .nav-menu a {
       color: #fff;
@@ -109,6 +110,9 @@ section {
   @media only screen and (min-width: 768px) {
     .nav-button {
       display: none; } }
+
+#menuButton {
+  color: #5f7a8c; }
 
 nav {
   background-color: #fff; }

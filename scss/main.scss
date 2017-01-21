@@ -19,13 +19,14 @@ body{
 	//in first children inline-block
 	//elements
 
-	> div{
+	 > div{
 		font-size:$base-font;
-		//resets font size
+		
 	}
-
+	 
 	> li{
 			font-size:$base-font;
+			//resets font size
 	}
 }
 
@@ -71,7 +72,6 @@ section{
 	}
 
 	img{
-
 		width: 100px;
 
 		@include small-screens{
@@ -128,21 +128,19 @@ section{
 			line-height:60px;		
 			border-bottom:1px solid #e5eaed;
 			min-width:100%;
-			background-color: #7c95a6;
+			background-color: $li-color;
 
 			&:hover{
-				background-color: #a6cce6;
+				background-color:$li-hover-color;
 			}
 		}
 		@include small-screens{
 			width:20%;
 		}
-
 	}
-
 	a{
 		text-decoration:none;
-
+			color:$nav-font-color;
 		@include mobile-screens-only{
 			color:#fff;
 			padding:20px 30%;
@@ -165,18 +163,18 @@ section{
 	padding: 4px 15px 0 0;	
 	font-size: 2em;
 
+
 	@include small-screens{
 		display:none;
 
 	}
-
-	
 }
 
+#menuButton{
+	color:$nav-font-color;
+}
 
-//testing purposes
 nav{
-
 	background-color:$main-nav-bg;
 	@include mobile-screens-only{
 		
@@ -187,8 +185,7 @@ nav{
 		.container{
 			padding: 0;
 		}
-	}
-	
+	}	
 }
 
 .menu-active{
