@@ -1,11 +1,5 @@
+@import "partials/variables";
 @import "partials/mixins";
-
-
-//variables
-
-//browser base font-size
-$base-font: 16px;
-
 
 *{
 	-webkit-box-sizing: border-box;
@@ -52,7 +46,7 @@ section{
 		width:90%;
 	}
 	@include large-screens{
-		//width:1170px;
+		max-width:1200px;
 	}
 }
 
@@ -114,22 +108,16 @@ section{
 		
 		padding:0;
 		margin:0;
+
 		@include mobile-screens-only{
-		width:100%; 
-		background-color: #7c95a6;
+			width:100%; 
+			padding-top: 23px;
 		}
 
 		@include small-screens{
 			width:100%;
 			
 		}
-		@include medium-screens{
-			//padding-left:5%;
-		}
-		@include large-screens{
-			//padding-left:20%;
-		}
-
 	}
 
 	li{
@@ -137,10 +125,10 @@ section{
 		display:inline-block;
 		text-align:center;
 		@include mobile-screens-only{
-			line-height:60px;
-			
+			line-height:60px;		
 			border-bottom:1px solid #e5eaed;
 			min-width:100%;
+			background-color: #7c95a6;
 
 			&:hover{
 				background-color: #a6cce6;
@@ -188,9 +176,12 @@ section{
 
 //testing purposes
 nav{
+
+	background-color:$main-nav-bg;
 	@include mobile-screens-only{
-		background-color:black;
+		
 		padding:10px;
+		min-height: 60px;
 	}
 	@include mobile-screens-only{
 		.container{
@@ -198,6 +189,11 @@ nav{
 		}
 	}
 	
+}
+
+.menu-active{
+	display:block;
+	padding-top:20px;
 }
 
 //fixing the navigator on scroll

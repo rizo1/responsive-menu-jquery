@@ -30,6 +30,9 @@ section {
   @media only screen and (min-width: 922px) {
     .container {
       width: 90%; } }
+  @media only screen and (min-width: 1200px) {
+    .container {
+      max-width: 1200px; } }
 
 .logo {
   padding: 5px;
@@ -68,7 +71,7 @@ section {
   @media only screen and (max-width: 767px) {
     .nav-menu ul {
       width: 100%;
-      background-color: #7c95a6; } }
+      padding-top: 23px; } }
   @media only screen and (min-width: 768px) {
     .nav-menu ul {
       width: 100%; } }
@@ -79,7 +82,8 @@ section {
     .nav-menu li {
       line-height: 60px;
       border-bottom: 1px solid #e5eaed;
-      min-width: 100%; }
+      min-width: 100%;
+      background-color: #7c95a6; }
       .nav-menu li:hover {
         background-color: #a6cce6; } }
   @media only screen and (min-width: 768px) {
@@ -106,13 +110,19 @@ section {
     .nav-button {
       display: none; } }
 
-@media only screen and (max-width: 767px) {
-  nav {
-    background-color: black;
-    padding: 10px; } }
-@media only screen and (max-width: 767px) {
-  nav .container {
-    padding: 0; } }
+nav {
+  background-color: #fff; }
+  @media only screen and (max-width: 767px) {
+    nav {
+      padding: 10px;
+      min-height: 60px; } }
+  @media only screen and (max-width: 767px) {
+    nav .container {
+      padding: 0; } }
+
+.menu-active {
+  display: block;
+  padding-top: 20px; }
 
 .fixed-nav {
   top: 0;
