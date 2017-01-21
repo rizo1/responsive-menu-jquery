@@ -1,9 +1,43 @@
 @import "partials/mixins";
 
-html{
-	box-sizing:border-box;
+
+//variables
+
+//browser base font-size
+$base-font: 16px;
+
+
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	padding:0;
 	margin:0;
+}
+
+body{
+	font-size:$base-font;
+}
+
+.align-grids{
+	font-size:0;
+	//allow for exact percentage widths 
+	//in first children inline-block
+	//elements
+
+	> div{
+		font-size:$base-font;
+		//resets font size
+	}
+
+	> li{
+			font-size:$base-font;
+	}
+}
+
+section{
+	min-height:100vh;
+	background-color: #d0f4ea;
 }
 
 .container{
@@ -11,36 +45,35 @@ html{
 	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
-
-	
-
 	@include small-screens{
-		width:768px;
+		width:95%;
 	}
 	@include medium-screens{
-		width:970px;
+		width:90%;
 	}
 	@include large-screens{
-		width:1170px;
+		//width:1170px;
 	}
-	
-	
 }
+
+
+
+
 .logo{
 	padding:5px;
 	max-width:30%;
 	
 
 	@include small-screens{
-		max-width:15%;
+		width:20%;
 		padding:20px;
 	}
 	@include medium-screens{
-		padding:20px;
-		max-width:20%;
+		//width:20%;
+		//padding:20px;
 	}
 	@include large-screens{
-		max-width:30%;
+		width:30%;
 	}
 
 	img{
@@ -63,15 +96,18 @@ html{
 }
 .nav-menu{
 	@include mobile-screens-only{
-		 width:100%;
+		width:100%;
 		display:none;
 		}
 
+	@include small-screens{
+		width:80%;
+	}
 	@include medium-screens{
-		max-width:75%;
+		//width:80%;
 	}
 	@include large-screens{
-		max-width:80%;
+		width:70%;
 	}
 
 	ul{
@@ -79,19 +115,19 @@ html{
 		padding:0;
 		margin:0;
 		@include mobile-screens-only{
-		min-width:100%; 
+		width:100%; 
 		background-color: #7c95a6;
 		}
 
 		@include small-screens{
-			min-width:100%;
-			padding-left:1%;
+			width:100%;
+			
 		}
 		@include medium-screens{
-			padding-left:5%;
+			//padding-left:5%;
 		}
 		@include large-screens{
-			padding-left:20%;
+			//padding-left:20%;
 		}
 
 	}
@@ -111,7 +147,7 @@ html{
 			}
 		}
 		@include small-screens{
-			min-width:100px;
+			width:20%;
 		}
 
 	}
@@ -138,14 +174,39 @@ html{
 	display:inline-block;
 	position:absolute;
 	right:0;
-	padding: 4px 15px 0 0;
-	font-size: 35px;
+	padding: 4px 15px 0 0;	
+	font-size: 2em;
 
 	@include small-screens{
 		display:none;
+
 	}
 
 	
+}
+
+
+//testing purposes
+nav{
+	@include mobile-screens-only{
+		background-color:black;
+		padding:10px;
+	}
+	@include mobile-screens-only{
+		.container{
+			padding: 0;
+		}
+	}
+	
+}
+
+//fixing the navigator on scroll
+.fixed-nav{
+	top: 0;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    padding: 20px 0px;
 }
 
 
